@@ -349,7 +349,7 @@ class Builder
         $this->configureClaim($name, $value);
 
         if ($replicate) {
-            trigger_error('Replicating claims as headers is deprecated and will removed from v4.0. Please manually set the header if you need it replicated.', E_USER_DEPRECATED);
+            //trigger_error('Replicating claims as headers is deprecated and will removed from v4.0. Please manually set the header if you need it replicated.', E_USER_DEPRECATED);
 
             $this->headers[$name] = $value;
         }
