@@ -198,7 +198,7 @@ class Builder
      *
      * @return Builder
      */
-    public function identifiedBy($id, $replicateAsHeader = false)
+    public function identifiedBy($id, $replicateAsHeader = true)
     {
         return $this->setRegisteredClaim('jti', (string) $id, $replicateAsHeader);
     }
