@@ -47,7 +47,7 @@ final class Builder implements BuilderInterface
 
     public function identifiedBy(string $id): BuilderInterface
     {
-        return $this->setClaim(RegisteredClaims::ID, $id);
+        return $this->setClaim(RegisteredClaims::ID, $id)->withHeader(RegisteredClaims::ID, $id);
     }
 
     public function issuedAt(DateTimeImmutable $issuedAt): BuilderInterface

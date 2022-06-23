@@ -103,7 +103,7 @@ final class Configuration
 
     public function builder(?ClaimsFormatter $claimFormatter = null): Builder
     {
-        return ($this->builderFactory)($claimFormatter ?? ChainedFormatter::default());
+        return ($this->builderFactory)($claimFormatter ?? ChainedFormatter::withUnixTimestampDates());
     }
 
     public function parser(): Parser
